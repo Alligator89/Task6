@@ -10,6 +10,7 @@
 <head>
     <title>Title</title>
 </head>
+<body>
 <p>
     First Name :<%=request.getParameter("first_name")%>
     <br/>

@@ -15,9 +15,10 @@ public class Check extends HttpServlet {
         req.setAttribute(name, "Dima");
         String name1 = req.getParameter("last_name");
         req.setAttribute(name1, "Pavlov");
+        boolean flag= false;
         if (name.isEmpty() || name1.isEmpty()) {
             req.getRequestDispatcher("/save-request.jsp").forward(req, resp);
-        } else if (name != null & name1 != null) {
+        } else if (!flag) {
             req.getRequestDispatcher("/FileLoaded.jsp").forward(req, resp);
         }
     }

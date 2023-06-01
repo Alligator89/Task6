@@ -11,12 +11,15 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/check" method="POST">
-    First Name: <input type="text" name="first_name">
+<form action="${pageContext.request.contextPath}/check" method="POST">
+    First Name: <label>
+    <input type="text" name="first_name">
+</label>
     <br/>
-    Last Name: <input type="text" name="last_name"/>
+    Last Name: <label>
+    <input type="text" name="last_name"/>
+</label>
     <input type="submit" value="Submit"/>
 </form>
-
 </body>
 </html>
