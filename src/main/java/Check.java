@@ -12,13 +12,12 @@ public class Check extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("first_name");
-        req.setAttribute(name, "Dima");
+        req.setAttribute("name", name);
         String name1 = req.getParameter("last_name");
-        req.setAttribute(name1, "Pavlov");
-        boolean flag = false;
+        req.setAttribute("name1", name1);
         if (name.isEmpty() || name1.isEmpty()) {
             req.getRequestDispatcher("/save-request.jsp").forward(req, resp);
-        } else if (!flag) {
+        } else {
             req.getRequestDispatcher("/FileLoaded.jsp").forward(req, resp);
         }
     }
